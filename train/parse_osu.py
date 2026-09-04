@@ -31,11 +31,14 @@ import numpy as np
 #
 # PARAMETER(S)
 #
-DATA_DIR   = "osu_data"     # .osu を置くフォルダ(サブフォルダも再帰探索)
+_HERE      = os.path.dirname(os.path.abspath(__file__))
+_PLAY      = os.path.join(_HERE, os.pardir, "play")   # 学習成果物の置き場(遊ぶ側)
+
+DATA_DIR   = os.path.join(_HERE, "osu_data")   # .osu を置くフォルダ(サブフォルダも再帰探索)
 KEYS       = 4              # 4鍵(D F J K)固定
 N_GAP_BINS = 3              # 直前間隔のバケット数 (短/中/長)
 WINDOW     = 24             # 1系列あたりのステップ数(既存GRUに合わせる)
-OUT_NPZ    = "osu_dataset.npz"
+OUT_NPZ    = os.path.join(_PLAY, "osu_dataset.npz")   # ゲームも gap_edges を読むので play/ に出す
 
 FEAT_DIM   = KEYS + N_GAP_BINS   # 入力次元 = 前レーン(4) + 間隔バケット(3) = 7
 

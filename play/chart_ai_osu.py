@@ -2,7 +2,7 @@
 """
 chart_ai_osu.py - 実譜面学習GRU(osu_lane_model.keras)でレーン配置を推論するヘルパ
 
-音楽ゲーム「クロス・ノーツ」(EC2save7_ai.py) から import して使う。
+音楽ゲーム「クロス・ノーツ」(game.py) から import して使う。
 
 旧 chart_ai.py との違い:
   ・教師が「合成メロディ＋人手ルール」ではなく "osu!mania の実譜面"。

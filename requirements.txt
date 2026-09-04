@@ -1,6 +1,9 @@
+# 遊ぶのに必要
 numpy
 pygame
 mido
-matplotlib
 tensorflow
 tf-keras
+
+# 学習し直すときだけ必要 (train/)
+matplotlib

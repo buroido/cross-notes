@@ -49,8 +49,12 @@ import matplotlib.pyplot as plt
 #
 SEED       = 1
 N_LANES    = 4
-NPZ_PATH   = "osu_dataset.npz"
-MODEL_PATH = "osu_lane_model.keras"
+_HERE      = os.path.dirname(os.path.abspath(__file__))
+_PLAY      = os.path.join(_HERE, os.pardir, "play")   # 学習成果物の置き場(遊ぶ側)
+
+NPZ_PATH   = os.path.join(_PLAY, "osu_dataset.npz")
+MODEL_PATH = os.path.join(_PLAY, "osu_lane_model.keras")
+CURVE_PATH = os.path.join(_HERE, "osu_learning_curve.png")
 
 N_UNITS    = 48
 EPOCHS     = 30
@@ -141,8 +145,8 @@ def plot_history(history):
     plt.plot(epochs, history.history["val_accuracy"], "o-", label="validation")
     plt.xlabel("epoch"); plt.ylabel("accuracy"); plt.title("Accuracy"); plt.legend(); plt.grid(True)
     plt.tight_layout()
-    plt.savefig("osu_learning_curve.png", dpi=140)
-    print("saved: osu_learning_curve.png")
+    plt.savefig(CURVE_PATH, dpi=140)
+    print(f"saved: {CURVE_PATH}")
 
 
 #

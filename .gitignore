@@ -1,10 +1,14 @@
 __pycache__/
 *.pyc
-*.osz
-*.mp4
-*.osb
 .vscode/
 
-# 第三者コンテンツのため公開リポジトリには含めない
-osu_data/
-music/
+# 第三者の著作物なのでリポジトリには含めない（フォルダだけ残す）
+play/music/*
+!play/music/.gitkeep
+train/osu_data/*
+!train/osu_data/.gitkeep
+
+# osu! の配布形式・付随ファイル
+*.osz
+*.osb
+*.mp4
