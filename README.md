@@ -199,7 +199,25 @@ python game.py     # play/ フォルダで実行してください
 
 ## 動作環境と制限
 
-- Windows / Python 3.11、`pygame` `mido` `numpy` `tensorflow` `tf-keras` が必要です
+### 動作確認環境
+
+| | バージョン |
+|---|---|
+| OS | Windows 11 |
+| Python | 3.11.9 |
+| pygame | 2.6.1 |
+| mido | 1.3.3 |
+| numpy | 2.3.2 |
+| tensorflow | 2.21.0 |
+| tf-keras | 2.21.0 |
+| matplotlib | 3.10.8（学習し直すときのみ） |
+
+ライブラリは `pip install -r requirements.txt` でまとめて入ります。
+`tensorflow` と `tf-keras` は**同じマイナーバージョンで揃えてください**
+（`TF_USE_LEGACY_KERAS=1` で旧 Keras API を使って推論しているためです）。
+
+### 制限
+
 - フォントに Windows のシステムフォント **meiryo** を使うため、Windows が前提です
 - 曲の再生に **MIDI 出力デバイス** を使います（Windows 標準の GS Wavetable Synth など）
 - **曲中で BPM が変わる MIDI には対応していません**（起動時に検出して終了します）

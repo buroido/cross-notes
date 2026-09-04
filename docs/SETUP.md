@@ -5,7 +5,7 @@
 ## 1. 必要なもの
 
 - **Windows**（フォントに meiryo、曲の再生に Windows の MIDI 出力を使うため）
-- **Python 3.11**
+- **Python 3.11**（動作確認は 3.11.9）
 - **MIDI 出力デバイス** … Windows なら標準の「Microsoft GS Wavetable Synth」で動く
 
 ## 2. インストール
@@ -18,13 +18,18 @@ pip install -r requirements.txt
 
 入るもの:
 
-| パッケージ | 用途 |
-|---|---|
-| `pygame` | 画面描画・キー入力・効果音・MIDI 出力 |
-| `mido` | MIDI ファイルの解析 |
-| `numpy` | 譜面データの処理 |
-| `tensorflow` / `tf-keras` | レーン生成モデルの推論 |
-| `matplotlib` | 学習曲線の描画（学習し直すときだけ必要） |
+| パッケージ | 動作確認バージョン | 用途 |
+|---|---|---|
+| `pygame` | 2.6.1 | 画面描画・キー入力・効果音・MIDI 出力 |
+| `mido` | 1.3.3 | MIDI ファイルの解析 |
+| `numpy` | 2.3.2 | 譜面データの処理 |
+| `tensorflow` | 2.21.0 | レーン生成モデルの推論 |
+| `tf-keras` | 2.21.0 | 同上（旧 Keras API。`tensorflow` とバージョンを揃える） |
+| `matplotlib` | 3.10.8 | 学習曲線の描画（学習し直すときだけ必要） |
+
+`chart_ai_osu.py` は `TF_USE_LEGACY_KERAS=1` を設定して旧 Keras API でモデルを読むため、
+**`tensorflow` と `tf-keras` は同じマイナーバージョンに揃えてください。**
+片方だけ上げるとモデルの読み込みで失敗します。
 
 ## 3. 遊ぶ曲を置く
 
