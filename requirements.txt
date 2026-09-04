@@ -1,0 +1,6 @@
+numpy
+pygame
+mido
+matplotlib
+tensorflow
+tf-keras

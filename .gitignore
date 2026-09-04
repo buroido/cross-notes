@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.osz
+*.mp4
+*.osb
+.vscode/
+
+# 第三者コンテンツのため公開リポジトリには含めない
+osu_data/
+music/
