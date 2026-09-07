@@ -2,9 +2,18 @@ __pycache__/
 *.pyc
 .vscode/
 
+# ビルド成果物（exe は配布物なのでリポジトリには置かない）
+build/
+dist/
+
 # 第三者の著作物なのでリポジトリには含めない（フォルダだけ残す）
 play/music/*
 !play/music/.gitkeep
+# パブリックドメインの楽曲だけは明示的に許可する
+!play/music/CREDITS.txt
+!play/music/Chopin_Etude_Op10-12_Revolutionary.mid
+!play/music/Debussy_ClairDeLune.mid
+
 train/osu_data/*
 !train/osu_data/.gitkeep
 

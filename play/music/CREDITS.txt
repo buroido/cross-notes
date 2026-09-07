@@ -1,0 +1,26 @@
+同梱楽曲について / About the bundled music
+==========================================
+
+本フォルダのMIDIファイルは The Mutopia Project (https://www.mutopiaproject.org/)
+より取得したものです。いずれも作曲者・楽譜ともに著作権保護期間が満了しており、
+Mutopia Project 上で "Public Domain" として配布されています。
+
+収録曲
+
+  Chopin_Etude_Op10-12_Revolutionary.mid
+    ショパン 練習曲 Op.10 No.12 ハ短調「革命」
+    Frederic Francois Chopin (1810-1849) / Public Domain
+    https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi.mid
+
+  Debussy_ClairDeLune.mid
+    ドビュッシー「ベルガマスク組曲」より 月の光
+    Claude Debussy (1862-1918) / Public Domain
+    https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.mid
+
+ライセンス：Public Domain
+  Mutopia Project の Public Domain 作品は、印刷・販売・改変・配布・録音・演奏を
+  含むあらゆる利用が許可されています。
+  https://www.mutopiaproject.org/legal.html
+
+ファイル名は本ゲームの選曲画面で見やすいように変更していますが、
+MIDIデータそのものは未改変です。

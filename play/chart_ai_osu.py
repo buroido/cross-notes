@@ -43,7 +43,10 @@ def _load_gap_edges():
         d = np.load(NPZ_PATH)
         return np.asarray(d["gap_edges"], dtype=np.float64)
     except Exception:
-        return np.array([87.0, 120.0])      # 既定(35譜面学習時の値)
+        # osu_dataset.npz(学習データ)は第三者の譜面から作成しているため配布物には含めない。
+        # 代わりに、学習時に実際に決定された境界値をここに固定値として持たせる。
+        # → npz が無くても、学習時とまったく同じバケット分割で推論できる。
+        return np.array([86.0, 120.0])      # 学習時(osu_dataset.npz)の gap_edges 実測値
 
 GAP_EDGES = _load_gap_edges()
 
